@@ -12,11 +12,11 @@ import sys
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(parent_dir)
 
-from meldataset import get_mel_spectrogram, MAX_WAV_VALUE
-from bigvgan import BigVGAN
+from ..meldataset import get_mel_spectrogram, MAX_WAV_VALUE
+from ..bigvgan import BigVGAN
 import librosa
 import numpy as np
-from utils import plot_spectrogram
+from ..utils import plot_spectrogram
 import PIL
 
 if torch.cuda.is_available():

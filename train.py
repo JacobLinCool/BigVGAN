@@ -20,24 +20,24 @@ from torch.utils.data import DistributedSampler, DataLoader
 import torch.multiprocessing as mp
 from torch.distributed import init_process_group
 from torch.nn.parallel import DistributedDataParallel
-from env import AttrDict, build_env
-from meldataset import MelDataset, mel_spectrogram, get_dataset_filelist, MAX_WAV_VALUE
+from .env import AttrDict, build_env
+from .meldataset import MelDataset, mel_spectrogram, get_dataset_filelist, MAX_WAV_VALUE
 
-from bigvgan import BigVGAN
-from discriminators import (
+from .bigvgan import BigVGAN
+from .discriminators import (
     MultiPeriodDiscriminator,
     MultiResolutionDiscriminator,
     MultiBandDiscriminator,
     MultiScaleSubbandCQTDiscriminator,
 )
-from loss import (
+from .loss import (
     feature_loss,
     generator_loss,
     discriminator_loss,
     MultiScaleMelSpectrogramLoss,
 )
 
-from utils import (
+from .utils import (
     plot_spectrogram,
     plot_spectrogram_clipped,
     scan_checkpoint,

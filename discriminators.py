@@ -12,8 +12,8 @@ from torch.nn import Conv2d
 from torch.nn.utils import weight_norm, spectral_norm
 from torchaudio.transforms import Spectrogram, Resample
 
-from env import AttrDict
-from utils import get_padding
+from .env import AttrDict
+from .utils import get_padding
 import typing
 from typing import Optional, List, Union, Dict, Tuple
 
